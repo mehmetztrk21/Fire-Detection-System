@@ -33,7 +33,6 @@ Data mining techniques have been applied in forest fire detection by analyzing l
 
 In conclusion, the integration of AI technologies, including computer vision, machine learning, and data mining, shows potential for improving forest fire detection and prediction. Further research is needed to improve the accuracy and efficiency of these models for real-world application [8].
 
-Deadline: 28 March 2023. Please note that late submissions may impact your score.
 
 
 ## **Proposed Approach**
@@ -42,7 +41,7 @@ We collected the data from a variety of sources, including videos and images of 
 
 We searched for publicly available datasets on forest fires and found two sources that suited our project requirements. We removed any corrupted or unusable images from the datasets. We labeled each image as "fire" or "no\_fire". For the second source, we re-labeled the images by three different individuals to ensure the accuracy of the labels. We performed data augmentation techniques such as rotation, flipping, and cropping to increase the size of our dataset and to prevent overfitting. Then we split the data into training, validation, and testing sets. We used 80% of the data for training, 10% for validation, and 10% for testing and we normalized the pixel values of the images to a range of [0, 1]. We use this data to train my model to recognize fires in various contexts.
 
-![](RackMultipart20230612-1-8o6dm4_html_a435d41c172b22f.png)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/a78f3755-3941-4de0-83a9-cc520a39cf57)
 
 **Figure 1.** Some Photos in the Dataset
 
@@ -54,7 +53,7 @@ Training and tuning other models like SVM may require more time and effort, wher
 
 The CNN model basically consists of a series of layers that transform the data it enters into a feature map. These layers include scent convolutional layers for learning the properties of the view, pooling layers used to reduce learned feature maps, and fully connected layers [11].
 
-![](RackMultipart20230612-1-8o6dm4_html_396785e359cb9265.png)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/21247a50-d808-450b-aada-88286b640f26)
 
 **Figure 2.** Layers of CNN [21]
 
@@ -62,11 +61,11 @@ Convolutional layers apply filters to extract features from the input data. Filt
 
 The the creation of a CNN model we use OpenCV and Pillow libraries in Python. The model architecture consists of two convolutional layers with 32 and 64 filters, respectively, and a max pooling layer after each convolutional layer. The model then flattens the output and passes it through two fully connected layers with 128 and 1 neuron, respectively, with ReLU and sigmoid activation functions.
 
-![](RackMultipart20230612-1-8o6dm4_html_11291887788aadae.jpg)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/363f7e5a-a1d7-4694-91f6-73c543dd31cf)
 
 **Figure 3.** Layers of the CNN Model
 
-![](RackMultipart20230612-1-8o6dm4_html_ee97787c3ea7bb48.png) ![](RackMultipart20230612-1-8o6dm4_html_d84bc4f34afe2745.png)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/62e56483-624b-4b87-95ed-1080b4f946de)
 
 **Figure 4.** ReLu and Sigmoid Functions Formulas
 
@@ -82,8 +81,6 @@ We used a sliding window approach to apply model to each patch of the image, and
 
 We scan our test folder and save the addresses of the photos to be measured. We use a while loop to randomly take the photos one by one and make measurements. We split the image on the window we created into squares and make the model predict. Then we highlight the areas where fire is detected in red squares and display them on the image to notify the user. We also think about use transfer learning to make the model more accurate with a limited amount of data.
 
-Deadline: 11 April 2023. Please note that late submissions may impact your score.
-
 
 ## **Results**
 
@@ -93,32 +90,28 @@ After completing the model training, we prepared our model with pickle to use it
 
 After these coding processes, our program works as shown below:
 
-| ![](RackMultipart20230612-1-8o6dm4_html_cc3ea911cdd738b.png) | ![](RackMultipart20230612-1-8o6dm4_html_3499e4e49dbd9261.png) |
-| --- | --- |
-| ![](RackMultipart20230612-1-8o6dm4_html_2390dfcb1be4f040.png) | ![](RackMultipart20230612-1-8o6dm4_html_e8357d60e00adac5.png) |
-| ![](RackMultipart20230612-1-8o6dm4_html_e8357d60e00adac5.png) | ![](RackMultipart20230612-1-8o6dm4_html_30be98e905af05b2.png) |
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/343f9011-438b-4c57-a16d-2407241531ac)
 
 **Figure 5.** Program Result of the System
 
 We performed various graphic coding for statistical evaluations of our model after our work. We used libraries such as Matplotlib and seaborn for these. The codes can be accessed via the Github link at the end of the section. The statistical graphics we drew are shown below.
 
-![](RackMultipart20230612-1-8o6dm4_html_420686ec970cfce6.jpg)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/21cf3557-ea1e-4a3b-b264-727fb3012859)
 
 **Figure 6.** Confusion Matrix for the Model
 
 Below is the table of statistical data obtained by our model during training. The results in this table are calculated based on the confusion matrix.
 
-![](RackMultipart20230612-1-8o6dm4_html_eb757f35d400a0fb.jpg)
 
 **Figure 7.** Statistics Table for the Model Result
 
-![](RackMultipart20230612-1-8o6dm4_html_9e010af99faf3c9c.jpg)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/0f52ea3d-f36f-4bde-939a-643191c76cb1)
 
 **Figure 8.** Receiver Operating Characteristic for the Model
 
 Above is the ROC (Receiver Operating Characteristic) curve.
 
-![](RackMultipart20230612-1-8o6dm4_html_99291a1db2e66a9f.png)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/09ffa6f6-1f29-4a99-9122-baaadfa70607)
 
 **Figure 9.** Accuracy and Loss Graph for the Train and Test Data
 
@@ -128,7 +121,7 @@ Similar Studies:
 
 In the study "Forest Fire Detection and Identification Using Image Processing and SVM" [26], video-based forest fire detection was studied. 500 fiery and 500 non-fiery images were used in the study. A success rate of 93.46% was achieved in this study.
 
-![](RackMultipart20230612-1-8o6dm4_html_7d05f94d9156a79c.png)
+![Uploading image.png…]()
 
 **Figure 10.**"Forest Fire Detection and Identification Using Image Processing and SVM
 
