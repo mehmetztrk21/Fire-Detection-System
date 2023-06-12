@@ -34,6 +34,7 @@ We collected the data from a variety of sources, including videos and images of 
 We searched for publicly available datasets on forest fires and found two sources that suited our project requirements. We removed any corrupted or unusable images from the datasets. We labeled each image as "fire" or "no_fire". For the second source, we re-labeled the images by three different individuals to ensure the accuracy of the labels. We performed data augmentation techniques such as rotation, flipping, and cropping to increase the size of our dataset and to prevent overfitting. Then we split the data into training, validation, and testing sets. We used 80% of the data for training, 10% for validation, and 10% for testing and we normalized the pixel values of the images to a range of [0, 1]. We use this data to train my model to recognize fires in various contexts.
 
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/bb869310-a3cd-466e-a3b6-eec8f115a962)
+
 Figure 1. Some Photos in the Dataset
 
 Convolutional Neural Network (CNN) yields successful results especially in the field of image processing. It is used to extract and classify features of image data. CNN employs convolutional operations, called convolutions, to learn the features of the data. This is achieved by sliding a filter matrix (kernel) over the image. The process is repeated using different filters to learn important features of the image. Ultimately, lower-dimensional feature maps are obtained. Using these features, the data is passed to an output layer for classification. CNN yields successful results especially in complex image data. [11][12]
@@ -42,15 +43,18 @@ Training and tuning other models like SVM may require more time and effort, wher
 The CNN model basically consists of a series of layers that transform the data it enters into a feature map. These layers include scent convolutional layers for learning the properties of the view, pooling layers used to reduce learned feature maps, and fully connected layers [11].
 
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/75559f12-651b-4acb-9153-0fc26dda8076)
+
 Figure 2. Layers of CNN [21]
 
 Convolutional layers apply filters to extract features from the input data. Filters separate the data from small data and perform the operations they have on each piece and create feature maps. Pooling layers are used to reduce the use of feature maps. Max-pooling preserves the highest pixel values, while average-pooling reduces the size by averaging the pixel values. Fully connected layers are used to constrain feature maps to classes. These layers flatten the feature maps into a vector and then import them into one or more fully connected layers to do the rendering [17].
 The the creation of a CNN model we use OpenCV and Pillow libraries in Python. The model architecture consists of two convolutional layers with 32 and 64 filters, respectively, and a max pooling layer after each convolutional layer. The model then flattens the output and passes it through two fully connected layers with 128 and 1 neuron, respectively, with ReLU and sigmoid activation functions.
 
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/44f12f2c-41ef-49a7-9a78-8e533a786e65)
+
 Figure 3. Layers of the CNN Model
 
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/6a796530-3c67-40f1-bf6f-9e6f5efed3eb)        
+
 Figure 4. ReLu and Sigmoid Functions Formulas
 
 ReLU (Rectified Linear Unit) is a non-linear activation function that returns the input value if it is positive, and zero otherwise. We use because it is computationally efficient and can speed up the convergence of the network during training. Sigmoid, on the other hand, is also a non-linear activation function that maps any input value to a value between 0 and 1. It is often used for binary classification problems, where the output of the network represents the probability of belonging to one of the classes. We also use it to print out the result.[18]
@@ -65,21 +69,28 @@ We scan our test folder and save the addresses of the photos to be measured. We 
 After necessary planning, coding was performed in the Python environment for the model. We used image processing techniques using a CNN model to detect forest fires in our project. We trained our model with 100 fiery and 100 non-fiery images for 10 epochs.
 After completing the model training, we prepared our model with pickle to use it and saved it. After this process, we created a user interface using Tkinter. We designed a functional and simple interface according to our needs. According to this design, images are randomly selected and sent to the model with a fixed width-to-length ratio. Based on the result of the model, a message "Attention! Fire detected! Contacting the fire department." or "Safe environment. Have a nice day." is conveyed to the user under the image.
 After these coding processes, our program works as shown below:
- 
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/ccdde774-32e5-4c10-8ea4-74b2bb89a576)
+
 Figure 5. Program Result of the System
 
 We performed various graphic coding for statistical evaluations of our model after our work. We used libraries such as Matplotlib and seaborn for these. The codes can be accessed via the Github link at the end of the section. The statistical graphics we drew are shown below.
 
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/2e186a63-d585-4426-bcea-e0b36b2bc434)
+
 Figure 6. Confusion Matrix for the Model
+
 Below is the table of statistical data obtained by our model during training. The results in this table are calculated based on the confusion matrix.
 
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/20982a4e-501e-4bc6-9644-bb186cafb805)
+
 Figure 7. Statistics Table for the Model Result
 
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/90a41f72-e9da-41fd-8255-19b8cd0163d4)
+
 Figure 8. Receiver Operating Characteristic for the Model
+
 Above is the ROC (Receiver Operating Characteristic) curve.
+
 
 Figure 9. Accuracy and Loss Graph for the Train and Test Data
 
@@ -88,16 +99,19 @@ Similar Studies:
 In the study "Forest Fire Detection and Identification Using Image Processing and SVM" [26], video-based forest fire detection was studied. 500 fiery and 500 non-fiery images were used in the study. A success rate of 93.46% was achieved in this study.
 
 ![Uploading image.png…]()
+
 Figure 10. "Forest Fire Detection and Identification Using Image Processing and SVM
 
 In the study "Real-time Wildfire Detection System With Wireless Sensor Networks" [27], a similar study was carried out, and a CNN model was used for 550 fiery and 550 non-fiery visuals. An 85% success rate was achieved in the project at the end of the study. The results obtained after a study are shown below:
 
 ![Uploading image.png…]()
+
 Table 1: Model performance
 
 In the study "Fire Detection Using Image Processing and Artificial Intelligence Techniques with Unmanned Aerial Vehicle: An Example Application" [28], a similar problem was studied. The data set consists of 755 images containing fires and 244 images without fires. After the study carried out using the SqueezeNet model, the results shown below were obtained:
 
 ![Uploading image.png…]()
+
 Table 2: Model performance
 
 Continuing on this project, we are striving to improve our model and system by exploring similar studies and techniques in the field. Through conducting further research and analysis, we aim to identify and integrate additional features and algorithms to enhance the accuracy and robustness of our system. Our ongoing efforts in this direction reflect our commitment to providing a reliable and efficient solution for wildfire detection and prevention, and to contribute to the wider effort to combat the devastating impacts of forest fires.
