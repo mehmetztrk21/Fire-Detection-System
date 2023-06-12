@@ -49,11 +49,11 @@ Figure 2. Layers of CNN [21]
 Convolutional layers apply filters to extract features from the input data. Filters separate the data from small data and perform the operations they have on each piece and create feature maps. Pooling layers are used to reduce the use of feature maps. Max-pooling preserves the highest pixel values, while average-pooling reduces the size by averaging the pixel values. Fully connected layers are used to constrain feature maps to classes. These layers flatten the feature maps into a vector and then import them into one or more fully connected layers to do the rendering [17].
 The the creation of a CNN model we use OpenCV and Pillow libraries in Python. The model architecture consists of two convolutional layers with 32 and 64 filters, respectively, and a max pooling layer after each convolutional layer. The model then flattens the output and passes it through two fully connected layers with 128 and 1 neuron, respectively, with ReLU and sigmoid activation functions.
 
-![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/44f12f2c-41ef-49a7-9a78-8e533a786e65)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/33a881f0-b1c8-4081-8d4d-1ef57b762799)
 
 Figure 3. Layers of the CNN Model
 
-![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/6a796530-3c67-40f1-bf6f-9e6f5efed3eb)        
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/949b8847-90d0-48ce-853c-31b2737705a6)      
 
 Figure 4. ReLu and Sigmoid Functions Formulas
 
@@ -70,28 +70,28 @@ After necessary planning, coding was performed in the Python environment for the
 After completing the model training, we prepared our model with pickle to use it and saved it. After this process, we created a user interface using Tkinter. We designed a functional and simple interface according to our needs. According to this design, images are randomly selected and sent to the model with a fixed width-to-length ratio. Based on the result of the model, a message "Attention! Fire detected! Contacting the fire department." or "Safe environment. Have a nice day." is conveyed to the user under the image.
 After these coding processes, our program works as shown below:
 
-![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/ccdde774-32e5-4c10-8ea4-74b2bb89a576)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/40c277e5-4cbc-42e1-9bee-a13bee5c2ffd)
 
 Figure 5. Program Result of the System
 
 We performed various graphic coding for statistical evaluations of our model after our work. We used libraries such as Matplotlib and seaborn for these. The codes can be accessed via the Github link at the end of the section. The statistical graphics we drew are shown below.
 
-![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/2e186a63-d585-4426-bcea-e0b36b2bc434)
 
 Figure 6. Confusion Matrix for the Model
 
 Below is the table of statistical data obtained by our model during training. The results in this table are calculated based on the confusion matrix.
 
-![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/20982a4e-501e-4bc6-9644-bb186cafb805)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/3757e2dc-7c8b-4320-a38f-62ee78373306)
 
 Figure 7. Statistics Table for the Model Result
 
-![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/90a41f72-e9da-41fd-8255-19b8cd0163d4)
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/856fb8dd-a11a-4af5-afec-39aa77380cf6)
 
 Figure 8. Receiver Operating Characteristic for the Model
 
 Above is the ROC (Receiver Operating Characteristic) curve.
 
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/bd22929b-af4e-4eba-93ec-7e1cc8359064)
 
 Figure 9. Accuracy and Loss Graph for the Train and Test Data
 
@@ -99,7 +99,7 @@ Above are the Accuracy and loss values of the Epoch-based model for both train a
 Similar Studies:
 In the study "Forest Fire Detection and Identification Using Image Processing and SVM" [26], video-based forest fire detection was studied. 500 fiery and 500 non-fiery images were used in the study. A success rate of 93.46% was achieved in this study.
 
-![Uploading image.png…]()
+![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/5a9309c5-dc42-42aa-b83a-20393868b33b)
 
 Figure 10. "Forest Fire Detection and Identification Using Image Processing and SVM
 
