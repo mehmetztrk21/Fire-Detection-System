@@ -69,6 +69,7 @@ We scan our test folder and save the addresses of the photos to be measured. We 
 After necessary planning, coding was performed in the Python environment for the model. We used image processing techniques using a CNN model to detect forest fires in our project. We trained our model with 100 fiery and 100 non-fiery images for 10 epochs.
 After completing the model training, we prepared our model with pickle to use it and saved it. After this process, we created a user interface using Tkinter. We designed a functional and simple interface according to our needs. According to this design, images are randomly selected and sent to the model with a fixed width-to-length ratio. Based on the result of the model, a message "Attention! Fire detected! Contacting the fire department." or "Safe environment. Have a nice day." is conveyed to the user under the image.
 After these coding processes, our program works as shown below:
+
 ![image](https://github.com/mehmetztrk21/Fire-Detection-System/assets/59453560/ccdde774-32e5-4c10-8ea4-74b2bb89a576)
 
 Figure 5. Program Result of the System
